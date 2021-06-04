@@ -101,7 +101,7 @@ COLOR_GREY_SCALE.addEventListener('click', () => {
   starDrawing(false);
   console.log('color_grey_scale');
 });
-RS_BUTTON.addEventListener("click", function (e) {
+RS_BUTTON.addEventListener("click", function () {
   window.location.reload();
 });
 
@@ -195,7 +195,7 @@ function colorDarken(HSL){
     HSL_arr[i] = parseInt(HSL_arr[i]);
   }
   if(HSL_arr[2] ===0){
-    HSL_arr[2] === 100;
+    return colorRandom();
   }else{
     HSL_arr[2] = Math.max(HSL_arr[2] - 10, 0);
   }
