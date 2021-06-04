@@ -1,19 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-size: 16px;
-  border: solid 0.01rem;
+  font-family: 'ZCOOL KuaiLe', cursive;
 }
 
 body {
   height: 100vh;
-  background-color: #546678;
+  background-image: url("https://image.freepik.com/free-vector/dark-low-poly-background_1048-7971.jpg");
 }
 
-header {
+#header {
   height: 10vh;
+  color: #e5c687;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 3rem;
 }
 
 #controler {
@@ -29,6 +34,8 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-left: 20px;
+  color: white;
 }
 
 #controler label {
@@ -46,16 +53,56 @@ header {
           flex-direction: column;
 }
 
+#controler::before {
+  content: "";
+  left: 0;
+  top: 12vh;
+  width: 25vw;
+  height: 86vh;
+  margin-left: 20px;
+  border-right: 0.1px solid #fff;
+  border-top: 0.1px solid #fff;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.31);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  position: absolute;
+  z-index: -1;
+}
+
 .btn {
   width: auto;
   height: 30px;
   padding: 0 1rem;
-  position: relative;
   margin: 10px 0;
+  -webkit-box-shadow: 2px 2px 5px #bcb382;
+          box-shadow: 2px 2px 5px #bcb382;
 }
 
 .btn:hover {
-  background-color: yellow;
+  background-color: #09814a;
+  border-radius: 10px;
+  border-style: none;
+}
+
+.btn:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  height: 28px;
+  margin: 11px 0;
+  font-size: 0.9rem;
+}
+
+.clickedBtn {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  height: 28px;
+  margin: 11px 0;
+  font-size: 1rem;
+  background-color: #09814a;
+  border-radius: 10px;
+  border-style: none;
+  background-color: #11ee8b;
 }
 
 #container {
@@ -65,6 +112,8 @@ header {
   display: grid;
   -ms-grid-columns: 2.5fr 7.5fr;
       grid-template-columns: 2.5fr 7.5fr;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
 }
 
 #gridContainer {
@@ -76,7 +125,8 @@ header {
 }
 
 .grids {
-  background-color: #fff;
+  background-color: whitesmoke;
+  border-radius: 20%;
   border-width: 0;
 }
 /*# sourceMappingURL=main.css.map */

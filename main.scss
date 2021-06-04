@@ -1,5 +1,8 @@
 $gridBgColor: #000;
-$mainBgColor: hsl(210, 18%, 40%);
+$mainBgColor: #12161a;
+$controlerBgColor: #09814a;
+$clickedBtnColor: hsl(153, 87%, 50%);
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
 
 @mixin flexCenter($direction) {
   display: flex;
@@ -13,31 +16,73 @@ $mainBgColor: hsl(210, 18%, 40%);
   margin: 0;
   padding: 0;
   font-size: 16px;
-  border: solid 0.01rem;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  // border: solid 0.01rem;
 }
 body {
   height: 100vh;
-  background-color: $mainBgColor;
+  background-image: url("https://image.freepik.com/free-vector/dark-low-poly-background_1048-7971.jpg");
 }
 
-header {
+#header {
   height: 10vh;
+  color: #e5c687;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 3rem;
 }
 #controler {
   @include flexCenter(column);
-  label{
+  margin-left: 20px;
+  color: white;
+  label {
     @include flexCenter(column);
   }
+  &::before {
+    content: "";
+    left: 0;
+    top: 12vh;
+    width: 25vw;
+    height: 86vh;
+    margin-left: 20px;
+    border-right: 0.1px solid #fff;
+    border-top: 0.1px solid #fff;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.31);
+    filter: blur(5px);
+    position: absolute;
+    z-index: -1;
+  }
 }
+
 .btn {
   width: auto;
   height: 30px;
   padding: 0 1rem;
-  position: relative;
   margin: 10px 0;
+  box-shadow: 2px 2px 5px #bcb382;
   &:hover {
-    background-color: yellow;
+    background-color: $controlerBgColor;
+    border-radius: 10px;
+    border-style: none;
   }
+  &:active {
+    box-shadow: none;
+    height: 28px;
+    margin: 11px 0;
+    font-size: 0.9rem;
+  }
+}
+
+.clickedBtn {
+  box-shadow: none;
+  height: 28px;
+  margin: 11px 0;
+  font-size: 1rem;
+  background-color: $controlerBgColor;
+  border-radius: 10px;
+  border-style: none;
+  background-color: $clickedBtnColor;
 }
 
 #container {
@@ -45,6 +90,7 @@ header {
   height: 90vh;
   display: grid;
   grid-template-columns: 2.5fr 7.5fr;
+  column-gap: 10px;
 }
 #gridContainer {
   width: auto;
@@ -54,7 +100,7 @@ header {
 }
 
 .grids {
-  background-color: #fff;
-  // border-radius: 50%;
+  background-color: rgb(245, 245, 245);
+  border-radius: 20%;
   border-width: 0;
 }
