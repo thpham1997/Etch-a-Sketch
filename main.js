@@ -10,6 +10,8 @@ const COLOR_CONFIRM = document.getElementById('colorConfirm');
 const COLOR_PICKER = document.getElementById('colorpicker');
 const COLOR_RANDOM = document.getElementById('colorRandom');
 const COLOR_GREY_SCALE = document.getElementById('colorGreyScale');
+const INSTRUCTION = document.getElementById('instruction');
+const CONTENT = document.getElementById('content');
 //mutable vairable
 let grid_divs = document.getElementsByClassName('grids');
 let isDrawEnable = true;
@@ -104,6 +106,10 @@ RS_BUTTON.addEventListener("click", function () {
   window.location.reload();
 });
 
+
+INSTRUCTION.addEventListener('click',()=>{
+  CONTENT.classList.toggle('content--active');
+});
 // end of Event
 
 
