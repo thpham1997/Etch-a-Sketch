@@ -11,19 +11,31 @@
 </head>
 
 <body>
-  <h1 id="header">Etch-A-Sketch</h1>
+  <h1 id="header">Etch-A-Sketch
+    <span id="instruction">?
+      <div id="content" class="content--active">
+        <h2>How to use</h2>
+        <ol>
+          <li>Click the mode you want (Random, Gray Scale, or Color Picker)</li>
+          <li>Double click anywhere to start/stop drawing</li>
+          <li>Note: when you choose a new mode, you have to double clik again to start drawing</li>
+          <li>Have Fun!</li>
+        </ol>
+      </div>
+    </span>
+  </h1>
   <div id="container">
     <div id="controler">
       <button id="colorRandom" class="btn">Random</button>
       <button id="colorGreyScale" class="btn">Grey Scale</button>
       <label for="colorpicker">Color picker
-        <input type="color" id="colorpicker" value='#000fff'>
+        <input type="color" id="colorpicker" value='#fff'>
         <button id="colorConfirm" class="btn">OK</button>
       </label>
       <button id="erase" class="btn">Erase</button>
       <button id="clearColor" class="btn">Clear</button>
       <button id="reset" class="btn">Reset</button>
-      
+
     </div>
 
     <div id="gridContainer"></div>
