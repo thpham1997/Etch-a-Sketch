@@ -35,10 +35,42 @@ body {
   text-align: center;
   padding: 10px 0;
   font-size: 3rem;
+  #instruction{
+    position: relative;
+    border: solid 0.1rem #fff;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5rem 0.5rem;
+    #content{
+      margin-top: 2rem;
+      padding: 2rem 2rem;
+      border-radius: 3rem;
+      color: black;
+      background-color: #bdbdbd;
+      position: fixed;
+      // display: block;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      align-content: center;
+      box-shadow: transparent 0 0 2000px rgba(200, 200, 200, 0.3);
+      z-index: 1;
+    }
+    &:hover{
+      border-radius: 1rem;
+      background-color: white;
+      color: black;
+      cursor: pointer;
+    }
+  }
 }
+.content--active{
+  display: none;
+}
+
+
 #container {
   position: relative;
-  display: inline-block;
+  // display: inline-block;
   width: auto;
   min-height: 80%;
   top: 3%;
